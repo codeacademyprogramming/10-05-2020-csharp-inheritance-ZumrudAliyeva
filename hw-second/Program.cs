@@ -13,32 +13,25 @@ namespace hw_second
 
             Console.WriteLine("Enter the keyword");
             string str = Console.ReadLine();
-            DocumentProgram docprogram = new DocumentProgram();
+            DocumentProgram docprogram = null;
             switch (str)
             {
                 case "basic":
                     docprogram = new DocumentProgram();
-                    docprogram.OpenDocument();
-                    docprogram.EditDocument();
-                    docprogram.SaveDocument();
                     break;
                 case "pro":
                     docprogram = new ProDocument();
-                    docprogram.OpenDocument();
-                    docprogram.EditDocument();
-                    docprogram.SaveDocument();
                     break;
                 case "expert":
                     docprogram = new ExpertDocument();
-                    docprogram.OpenDocument();
-                    docprogram.EditDocument();
-                    docprogram.SaveDocument();
                     break;
                 default:
                     Console.WriteLine("Invalid keyword");
                     break;
             }
-
+            docprogram.OpenDocument();
+            docprogram.EditDocument();
+            docprogram.SaveDocument();
         }
     }
 
